@@ -69,7 +69,7 @@ def teste_concorrencia(num_threads=10):
     print(f"   Cientista criado: ID {cientista_id}\n")
     
     # Definir horário no futuro (25 horas a partir de agora)
-    agora = datetime.now(datetime.timezone.utc)
+    agora = datetime.now(timezone.utc)
     inicio = agora + timedelta(hours=25)
     # Arredondar para múltiplo de 5 minutos
     inicio = inicio.replace(minute=(inicio.minute // 5) * 5, second=0, microsecond=0)

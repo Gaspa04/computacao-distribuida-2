@@ -104,7 +104,7 @@ def teste_com_lock(num_threads=10):
     print(f"   Cientista criado: ID {cientista_id}\n")
     
     # Definir horário
-    agora = datetime.now(datetime.timezone.utc)
+    agora = datetime.now(timezone.utc)
     inicio = agora + timedelta(hours=25)
     inicio = inicio.replace(minute=(inicio.minute // 5) * 5, second=0, microsecond=0)
     fim = inicio + timedelta(minutes=30)
