@@ -6,7 +6,7 @@ ENTREGA 2: Demonstra o PROBLEMA (múltiplos agendamentos são criados)
 
 import requests
 import threading
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import json
 import time
 
@@ -69,7 +69,7 @@ def teste_concorrencia(num_threads=10):
     print(f"   Cientista criado: ID {cientista_id}\n")
     
     # Definir horário no futuro (25 horas a partir de agora)
-    agora = datetime.now(timezone.utc)
+    agora = datetime.now()
     inicio = agora + timedelta(hours=25)
     # Arredondar para múltiplo de 5 minutos
     inicio = inicio.replace(minute=(inicio.minute // 5) * 5, second=0, microsecond=0)
